@@ -403,7 +403,8 @@ namespace AssetBundles
 				// If downloading fails.
 				if (download.error != null)
 				{
-					m_DownloadingErrors.Add(keyValue.Key, string.Format("Failed downloading bundle {0} from {1}: {2}", keyValue.Key, download.url, download.error));
+					m_DownloadingErrors.Add(keyValue.Key, string.
+						Format("Failed downloading bundle {0} from {1}: {2}", keyValue.Key, download.url, download.error));
 					keysToRemove.Add(keyValue.Key);
 					continue;
 				}
@@ -414,7 +415,8 @@ namespace AssetBundles
 					AssetBundle bundle = download.assetBundle;
 					if (bundle == null)
 					{
-						m_DownloadingErrors.Add(keyValue.Key, string.Format("{0} is not a valid asset bundle.", keyValue.Key));
+						m_DownloadingErrors.Add(keyValue.Key, string.
+							Format("{0} is not a valid asset bundle.", keyValue.Key));
 						keysToRemove.Add(keyValue.Key);
 						continue;
 					}
